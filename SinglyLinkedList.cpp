@@ -33,7 +33,7 @@ int SinglyLinkedList::Remove(MY_TYPE inp) {
   }
   if (first_->data == inp) {
     auto tmp = std::move(first_);
-    first_ = std::move(first_->next);
+    first_ = std::move(tmp->next);
     size_--;
     return 0;
   }
