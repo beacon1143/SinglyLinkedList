@@ -51,6 +51,7 @@ int SinglyLinkedList::Remove(MY_TYPE inp) {
       }
       return 0;
     }
+    tmp = tmp->next.get();
   }
   std::cout << "Not found this number in the list!\n";
   return 0;
