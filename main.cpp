@@ -25,7 +25,7 @@ int main() {
       case 3:
         std::cout << list << "\n";
         break;
-      case 4:
+      case 0:
         i = num;
         break;
       }
