@@ -4,7 +4,7 @@ size_t SinglyLinkedList::GetSize() const {
   return size_;
 }
 
-int SinglyLinkedList::PushBack(MY_TYPE inp) {
+int SinglyLinkedList::PushBack(const MY_TYPE inp) {
   try {
     if (size_ == 0) {
       first_ = std::make_unique<Node>(inp);
@@ -26,7 +26,7 @@ int SinglyLinkedList::PushBack(MY_TYPE inp) {
   }
 }
 
-int SinglyLinkedList::Remove(MY_TYPE inp) {
+int SinglyLinkedList::Remove(const MY_TYPE inp) {
   if (size_ == 0) {
     std::cout << "Nothing to remove, the list is empty!\n";
     return 1;

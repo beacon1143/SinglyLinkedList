@@ -11,15 +11,15 @@ private:
   struct Node {
     const MY_TYPE data;
     std::unique_ptr<Node> next;
-    explicit Node(MY_TYPE _data) : data{_data}, next{nullptr} {};
+    explicit Node(const MY_TYPE _data) : data{_data}, next{nullptr} {};
   };
   std::unique_ptr<Node> first_;
   Node* last_;
   size_t size_;
 public:
   size_t GetSize() const;
-  int PushBack(MY_TYPE inp);
-  int Remove(MY_TYPE inp);
+  int PushBack(const MY_TYPE inp);
+  int Remove(const MY_TYPE inp);
   SinglyLinkedList();
   ~SinglyLinkedList();
 
