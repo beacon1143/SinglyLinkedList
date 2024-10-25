@@ -65,10 +65,6 @@ SinglyLinkedList::SinglyLinkedList() {
 }
 
 SinglyLinkedList::~SinglyLinkedList() {
-  //std::cout << "In the destructor...\n";
-  if (first_ == nullptr) {
-    return;
-  }
   while (first_ != nullptr) {
     first_ = std::move(first_->next);
   }

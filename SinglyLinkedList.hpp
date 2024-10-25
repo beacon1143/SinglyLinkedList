@@ -12,6 +12,9 @@ private:
     const MY_TYPE data;
     std::unique_ptr<Node> next;
     explicit Node(const MY_TYPE _data) : data{_data}, next{nullptr} {};
+    ~Node() {
+      std::cout << "Node destructor working...\n";
+    }
   };
   std::unique_ptr<Node> first_;
   Node* last_;
