@@ -80,10 +80,9 @@ std::ostream& operator<<(std::ostream& out, const SinglyLinkedList& list) {
   if (tmp == nullptr) {
     throw std::runtime_error("Error! In SinglyLinkedList::operator<<!\n");
   }
-  while (tmp->next != nullptr) {
+  while (tmp != nullptr) {
     out << tmp->data << " ";
     tmp = tmp->next.get();
   }
-  out << tmp->data << "\n";
   return out;
 }
